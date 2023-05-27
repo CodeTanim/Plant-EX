@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800");
+* {
+  box-sizing: border-box;
+}
+body {
+  background: hwb(127 93% 0%) !important;
+  min-height: 100vh;
+  display: flex;
+  font-weight: 400;
+  font-family: "Fira Sans", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label,
+span {
+  font-weight: 500;
+  font-family: "Fira Sans", sans-serif;
+  color: black;
+}
+body,
+html,
+.App,
+#root,
+.auth-wrapper {
+  width: 100%;
+  height: 100%;
+}
+.navbar-light {
+  background-color: #fbfbfb;
+  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+}
+.auth-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.auth-inner {
+  width: 450px;
+  margin: auto;
+  background: rgba(1, 1, 1, 0);
+  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+  padding: 40px 55px 45px 55px;
+  border-radius: 15px;
+  transition: all 0.3s;
+}
+.auth-wrapper .form-control:focus {
+  border-color: #167bff;
+  box-shadow: none;
+}
+.auth-wrapper h3 {
+  text-align: center;
+  margin: 0;
+  line-height: 1;
+  padding-bottom: 20px;
+}
+.custom-control-label {
+  font-weight: 400;
+}
+.forgot-password,
+.forgot-password a {
+  text-align: right;
+  font-size: 13px;
+  padding-top: 10px;
+  color: #000000;
+  margin: 0;
+}
+.forgot-password a {
+  color: #0e57b5;
+}
+
+.logo-cus {
+  height: 50px;
+  width: 60px;
+}
+
+.form-group {
+  margin-top: 10px;
+  width: 100%;
+}
+
+#firstName {
+  background-color:white;
+
+}
+
+#lastName {
+  background-color:white;
+
+}
+
+#email {
+  background-color:white;
+
+}
+
+#password {
+  background-color:white;
+
+}
+
+
+
+
+
+.submit-button {
+  display: inline-block;
+  background-color: #056d04;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 5px;
+}
+
+.submit-button:hover {
+  background-color: #004a15;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.submit-button:focus {
+  outline: none;
+}
+
+.submit-button:active {
+  transform: translateY(1px);
+}
+
+@media (max-width: 768px) {
+  .auth-inner {
+    width: 90%;
+  }
+}

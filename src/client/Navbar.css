@@ -1,0 +1,141 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(10, 91, 10);
+  padding: 10px;
+  height: 100px;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  height: 100%;
+}
+
+.logo {
+  height: 100%;
+  margin-right: 10px;
+}
+
+.bars {
+  display: none;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: all 0.5s ease;
+}
+
+#home:hover {
+  color: #33ff77; /* Change the color to a fancy color when hovered */
+}
+
+#about:hover {
+  color: #33ff77; /* Change the color to a different fancy color when hovered */
+}
+
+#identify:hover {
+  color: #33ff77; /* Change the color to another fancy color when hovered */
+}
+
+.nav-menu > * {
+  color: white;
+}
+
+.nav-menu > *:first-child {
+  margin-left: 0;
+}
+
+.nav-menu > .active {
+  color: white;
+}
+
+.nav-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-btn-link {
+  background-color: white;
+  color: green;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+/* adjust font size for smaller screen sizes */
+@media screen and (max-width: 400px) {
+  .nav-menu > * {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .nav-menu {
+    justify-content: space-between;
+    flex: 1;
+  }
+
+  .nav-menu > *:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+@media only screen and (min-width: 360px) {
+  .nav-menu > *:not(:last-child) {
+    margin-right: 2px;
+  }
+}
+/* adjust font size for smaller screen sizes */
+@media screen and (max-width: 390px) {
+  .nav-menu > * {
+    font-size: 0.8rem;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .nav-btn > * {
+    font-size: 0.5rem;
+    margin-right: 5px;
+  }
+
+  .logo {
+    height: 60px;
+    margin-right: 1px;
+  }
+  .nav {
+    background-color: rgb(10, 91, 10);
+    padding: 5px;
+    height: 75px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .nav-menu {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-menu > * {
+    padding: 5px 0; /* add vertical padding for better separation */
+  }
+
+  .nav-btn {
+    margin-top: 10px;
+  }
+}

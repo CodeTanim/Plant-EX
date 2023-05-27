@@ -1,0 +1,95 @@
+@media only screen and (max-width: 600px) {
+  .plant-image {
+    max-width: 100px;
+    max-height: 150px;
+  }
+
+  .description-container {
+    margin-top: 10px;
+    max-height: 600px;
+    overflow-y: scroll;
+  }
+  .plant-info {
+    margin-top: 20px;
+  }
+  .plant-details {
+    width: 320px;
+  }
+
+  .plant-details h2 {
+    font-size: 0.7rem;
+  }
+  .plant-details h6 {
+    font-size: 0.6rem;
+  }
+
+  .plant-details p {
+    font-size: 0.6rem;
+  }
+}
+
+.loading-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 2em;
+  color: #555;
+  background: #f3f3f3;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.loading-screen::before {
+  content: "";
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  position: absolute;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.plant-image {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.plant-info {
+  margin-top: 0;
+}
+
+.description-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 5px;
+}
+
+.plant-details h2 {
+  font-size: 1.2rem;
+  color: rgb(22, 73, 7);
+}
+.plant-details h6 {
+  font-size: 1rem;
+  color: #585555;
+}
+
+.plant-details p {
+  font-size: 0.9rem;
+}

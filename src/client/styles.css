@@ -1,0 +1,184 @@
+.navbar {
+  background-color: green;
+  padding: 10px;
+  margin: 0;
+  width: 100%; /* Set the navbar container to take up full width */
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-nav li {
+  display: flex;
+
+  margin-left: 10px;
+}
+
+.navbar-nav li a {
+  color: white;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-form input {
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 5px;
+}
+
+.search-form button {
+  border: none;
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
+  color: green;
+}
+.identify-button {
+  background-color: #337ab7;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#plant-input-box {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+  margin: 8px 0;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.plant-identification {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  padding: 20px;
+  background-color: #e5efdf;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  padding-top: 60px; /* Add padding from the top */
+}
+
+.plant-identification h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.plant-identification label {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .plant-identification {
+    margin: 2px;
+    padding: 10px;
+  }
+
+  .plant-identification label {
+    font-size: 1rem;
+  }
+}
+
+#plant-input-box {
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  #plant-input-box {
+    width: 90%;
+    padding: 6px;
+    font-size: 14px;
+  }
+}
+
+.plant-identification button {
+  background-color: #1e5607;
+  color: white;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.plant-identification button:hover {
+  background-color: #3e8e41;
+  transform: scale(1.05);
+}
+
+.base {
+  /* padding-top: 20px; Add padding from the top */
+  position: fixed;
+  top: 20px;
+  bottom: 20px;
+  display: flex;
+  justify-content: center; /* Center the button horizontally */
+  align-items: center; /* Center the button vertically */
+  width: 100%; /* Take up full width */
+}
+
+.Header {
+  background-color: #00796b;
+  font-size: 1.4rem;
+  height: 60px;
+  color: white;
+}
+
+.Content p {
+  font-size: 18px;
+}
+
+.Content img {
+  width: 100%; /* Set the width of the image */
+  height: 200px; /* Set the desired height of the image */
+  object-fit: cover; /* Maintain aspect ratio and crop if necessary */
+  object-position: center; /* Center the image within its container */
+}
+
+@media (max-width: 600px) {
+  .base {
+    position: relative; /* change from fixed to relative */
+    /* bottom: auto; remove fixed bottom */
+    width: 100%; /* still take full width */
+    margin-top: 10px; /* add some top margin to give space between the input and the card */
+    margin-bottom: 20px;
+  }
+
+  .plant-identification .identify-button {
+    margin-top: 30px;
+    
+  }
+
+  .plant-identification {
+    margin-top: 80px; /* Increase the margin-top to create more separation */
+    padding-top: 30px; /* Adjust the padding-top for additional separation */
+    padding-bottom: 30px; /* Adjust the padding-bottom for additional separation */
+  }
+
+  .Header {
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .Content p {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,235 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: -20px;
+}
+
+.card-container > * {
+  width: calc(50% - 10px);
+  margin-bottom: 20px;
+}
+
+@media (max-width: 380px) {
+  .card-container > * {
+    width: 100%;
+    max-width: calc(50% - 10px);
+    margin-right: 2px;
+    margin-bottom: 2px;
+    height: 300px; /* Set fixed height on desktop */
+  }
+  .card-container > *:nth-child(2n) {
+    margin-right: 0;
+  }
+  .title {
+    font-size: 1.2rem;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .CardContent > p {
+    font-size: 14px; /* Adjust the font size as desired */
+  }
+}
+
+.CardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.CardContent img {
+  padding-top: 0.5cm;
+  margin: 0 auto;
+}
+
+.button-style {
+  width: 100%;
+  max-width: calc(50% - 10px);
+  margin-bottom: 20px;
+  height: 300px; /* Set a fixed height for desktop */
+  width: 600px;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.MuiButtonBase-root:hover {
+  /* Existing styles */
+
+  /* Add animation styles */
+  animation-name: shake;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.MuiPaper-root {
+  width: 100%;
+  max-width: calc(50% - 10px);
+  margin-bottom: 2px;
+  height: 200px; /* Set a fixed height for desktop */
+  width: 600px;
+}
+
+.card-container > .MuiPaper-root,
+.card-container > .MuiButtonBase-root {
+  width: calc(50% - 10px);
+  margin-bottom: 20px;
+}
+
+@media (min-width: 375px) {
+  .card-container > .MuiPaper-root,
+  .card-container > .MuiButtonBase-root {
+    width: calc(100% - 10px);
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 390px) {
+  .card-container > .MuiPaper-root,
+  .card-container > .MuiButtonBase-root {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-container > .MuiPaper-root:nth-child(2n + 1),
+  .card-container > .MuiButtonBase-root:nth-child(2n + 1) {
+    margin-right: 0;
+  }
+}
+
+.title {
+  background-color: #1e5607;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  font-size: 50px; /* adjust as needed */
+}
+
+.search-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  background-color: rgb(141, 180, 138);
+}
+
+.search-form input[type="text"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+  margin-bottom: 10px;
+  width: 300px;
+  height: 45px;
+  font-size: 16px;
+}
+
+.search-form button[type="submit"] {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #1e5607;
+  color: #eef0eb;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#searchbox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-left: 60px;
+  margin-top: 7px;
+}
+
+#searchButton {
+  margin-left: 0;
+}
+body {
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  body {
+    position: fixed;
+    width: 100%;
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  .footer {
+    bottom: 0;
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .search-form input[type="text"] {
+    width: 100%;
+  }
+
+  #searchbox {
+    width: 300px;
+    margin-left: -10px;
+  }
+
+  #searchButton {
+    margin-left: 0;
+    margin-top: 2px;
+  }
+}
+
+.Card {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 400px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+  justify-content: center;
+}
+
+.Card:hover {
+  transform: scale(1.05);
+}
+
+.CardHeader {
+  background-color: #00796b;
+  color: #fff;
+  padding: 10px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  height: 50px;
+}
+
+.CardContent img {
+  width: 50px;
+  height: 20px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
