@@ -7,24 +7,30 @@ import { useLocation } from "react-router-dom";
 import { initializeApp } from "firebase/app";
 import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
 import "./Description.css";
+import { DotenvConfigOptions } from "dotenv";
+import config from './config';
 
 const sampleCareDetails =
   "The Alpine rose should be planted in well-draining soil in a location that receives full sun. Water regularly, keeping the soil moist but not waterlogged. Mulch around the base of the plant to retain moisture and suppress weeds. Provide support for the plant if necessary, as it can become top-heavy. Prune in early spring to remove dead or damaged wood and shape the plant. Watch for pests such as aphids and spider mites, and treat with insecticidal soap if necessary. Diseases such as powdery mildew can be prevented by ensuring good air circulation around the plant. Harvest seeds in late summer or early fall when the seed pods have turned brown and are beginning to split open.";
 const firebaseConfig = {
-  apiKey: "AIzaSyAHL9eJk1bV0PvQ26TFXCLn-w8KKdXPI7Y",
-  authDomain: "plantcareapp-9fa53.firebaseapp.com",
-  projectId: "plantcareapp-9fa53",
-  storageBucket: "plantcareapp-9fa53.appspot.com",
-  messagingSenderId: "764829673512",
-  appId: "1:764829673512:web:1ac26cb80b0e8b61892d1d",
-  measurementId: "G-9Y0YEC03C8",
+  apiKey: config.firebase_api_key,
+  authDomain: config.firebase_authDomain,
+  projectId: config.firebase_projectid,
+  storageBucket: config.firebase_storageBucket,
+  messagingSenderId: config.firebase_messagingSenderId,
+  appId: config.firebase_appId,
+  measurementId: config.firebase_measurementId,
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const firestore = getFirestore();
 
-const API_KEY = "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";
+
+const API_KEY = config.API_KEY;
+//console.log(API_KEY);
+
+// const API_KEY = "TEST";
 
 const Description = () => {
   const location = useLocation();

@@ -5,6 +5,7 @@ import Footer from "./Footer";
 import { ButtonBase, Card } from "@material-ui/core";
 import { useNavigate } from "react-router-dom";
 import "./styles.css";
+import config from "./config"
 
 interface Plant {
   id: number;
@@ -51,7 +52,7 @@ const PlantIdentification: React.FC = () => {
       formData.append("images", selectedImage);
       formData.append("organs", "auto");
 
-      const PLANTNET_API_KEY = "2b10tN1k7Vuo12XuWb9IyR3pe";
+      const PLANTNET_API_KEY = config.plantNet_api;
       const PLANTNET_API_URL = `https://my-api.plantnet.org/v2/identify/all?include-related-images=false&no-reject=false&lang=en&api-key=${PLANTNET_API_KEY}`;
 
       try {

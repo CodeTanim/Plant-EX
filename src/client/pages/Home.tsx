@@ -1,9 +1,13 @@
 import React, { useState } from "react";
-import Navbar from "../Navbar";
-import Footer from "../Footer";
+
 import { Card, ButtonBase } from "@material-ui/core";
 import "./home.css";
 import { useNavigate } from "react-router-dom";
+
+import config from './config';
+
+console.log(config.API_KEY);  // This will log your API key
+
 
 interface SearchBarProps {
   onSearch: (searchTerm: string) => void;
@@ -81,11 +85,9 @@ const Home = () => {
     navigate("/description", { state: { plant } });
   };
   return (
-    <div>
-      <Navbar />
+    <div className="container">
       <SearchBar onSearch={handleSearch} />
       <section>
-        {searchPerformed && <h1 className="title">Top Results: </h1>}
         {searchPerformed && plantCardData.length >= 1 && (
           <div className="card-container">
             <ButtonBase onClick={() => handleCardClick(plantCardData[0])}>

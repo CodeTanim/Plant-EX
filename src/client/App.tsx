@@ -10,11 +10,13 @@ import Signup from "./pages/Signup";
 import PlantIdentification from "./PlantIdentification";
 import Description from "./pages/Description";
 import DescriptionImage from "./pages/DescriptionImage"; // import the component first
+//require('dotenv').config();
 
 function App(): JSX.Element {
   const handleIdentify = (image: File) => {
     // Implement your plant identification logic here.
     console.log("Image submitted for identification:", image);
+    console.log(process.env.REACT_APP_API_KEY);
   };
 
   return (
