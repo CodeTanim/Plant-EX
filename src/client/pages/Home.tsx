@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Card, ButtonBase } from "@material-ui/core";
 import "./home.css";
 import { useNavigate } from "react-router-dom";
+import Navbar from "../Navbar";
 
 import config from './config';
 
@@ -85,7 +86,11 @@ const Home = () => {
     navigate("/description", { state: { plant } });
   };
   return (
+   
+    <div>
+      <Navbar />
     <div className="container">
+      {/* <Navbar />  */}
       <SearchBar onSearch={handleSearch} />
       <section>
         {searchPerformed && plantCardData.length >= 1 && (
@@ -173,6 +178,7 @@ const Home = () => {
           </div>
         )}
       </section>
+    </div>
     </div>
   );
 };
